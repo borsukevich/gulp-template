@@ -66,7 +66,7 @@ gulp.task("style:build", function() {
 	.pipe(plugins.uncss({
 		html: ["src/templates/*.html"]
 	}))
-	//.pipe(plugins.minifyCss())
+	.pipe(plugins.minifyCss())
 	.pipe(plugins.rename({suffix: '.min'}))
 	.pipe(gulp.dest(path.build.css))
 	.pipe(reload({stream: true}));
